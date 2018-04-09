@@ -9,6 +9,7 @@ import (
 // databaseCmd represents the database command
 var databaseCmd = &cobra.Command{
 	Use:   "database",
+	Aliases: []string{"db"},
 	Short: "Manage a MySQL-type database in WPLib Box",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("database called")
