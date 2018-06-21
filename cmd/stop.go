@@ -9,7 +9,7 @@ import (
 // stopCmd represents the stop command
 var stopCmd = &cobra.Command{
 	Use:   "stop",
-	Short: "Stop the services of a WPLib Box",
+	Short: "Stop all the services of a WPLib Box",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("stop called")
 	},

@@ -9,7 +9,7 @@ import (
 // restartCmd represents the restart command
 var restartCmd = &cobra.Command{
 	Use:   "restart",
-	Short: "Restart the services of a WPLib Box",
+	Short: "Stop and then restart all the services of a WPLib Box",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("restart called")
 	},

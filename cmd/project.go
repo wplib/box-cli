@@ -23,7 +23,8 @@ import (
 // projectCmd represents the project command
 var projectCmd = &cobra.Command{
 	Use:   "project",
-	Short: "Manage project settings for WPLib Box",
+	Short: "Manage your 'Projects' (a.k.a. websites) served by WPLib Box",
+	Long: "Manage your 'Projects' served by WPLib Box. Each Project is identified by its local domain (e.g. 'example.local') and is intended to be loadable from your host computer via your browser.",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("project called")
 	},

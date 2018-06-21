@@ -10,7 +10,7 @@ import (
 // stackCmd represents the stack command
 var stackCmd = &cobra.Command{
 	Use:   "stack",
-	Short: "Manage Stacks in WPLib Box",
+	Short: "Manage 'Stacks' in WPLib Box",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("stack called")
 	},
