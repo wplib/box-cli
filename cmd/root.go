@@ -8,10 +8,10 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "box",
-	Short: "Box is the terminal command-line tool for WPLib Box.",
-	Long: `Box is the terminal command-line tool for WPLib Box. 
-Box is designed to run inside the WPLib Box virtual machine.
-To run "box" first type "vagrant ssh" on your command line.`,
+	Short: "Box is the command-line tool for WPLib Box that you run in your terminal.",
+	Long: `Box is the command-line tool for WPLib Box. 
+Box is designed to run both on your host Mac, Windows or Linux computer but also inside the WPLib Box virtual machine (VM).
+To run "box" inside the VM, first type "vagrant ssh" on your command line.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 	},

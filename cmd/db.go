@@ -6,18 +6,18 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// databaseCmd represents the database command
-var databaseCmd = &cobra.Command{
-	Use:   "database",
-	Aliases: []string{"db"},
-	Short: "Manage a MySQL-type database in WPLib Box",
+// dbCmd represents the database command
+var dbCmd = &cobra.Command{
+	Use:   "db",
+	Aliases: []string{"databases"},
+	Short: "Manage MySQL-type databases that WPLib Box provides for you",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("database called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(databaseCmd)
+	rootCmd.AddCommand(dbCmd)
 
 	// Here you will define your flags and configuration settings.
 

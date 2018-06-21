@@ -6,17 +6,18 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// containerCmd represents the container command
-var containerCmd = &cobra.Command{
-	Use:   "container",
-	Short: "Manage Service Containers for WPLib Box",
+// cargoCmd represents the 'cargo' command
+var cargoCmd = &cobra.Command{
+	Use:   "cargo",
+	Short: "Manage your various 'Cargo' (Cargo represents WPLib Box's extensibility model.)",
+	Long: "Manage Cargo for WPLib Box where Cargo may come form of Services, Executables, (Application) Code and/or Stacks.",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("container called")
+		fmt.Println("cargo called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(containerCmd)
+	rootCmd.AddCommand(cargoCmd)
 
 	// Here you will define your flags and configuration settings.
 

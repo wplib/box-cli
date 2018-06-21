@@ -10,6 +10,7 @@ import (
 // startCmd represents the start command
 var startCmd = &cobra.Command{
 	Use:   "start",
+	Aliases: []string{"startup"},
 	Short: "Start the services of a WPLib Box",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("start called")

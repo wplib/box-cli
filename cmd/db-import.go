@@ -6,8 +6,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// importCmd represents the import command
-var importCmd = &cobra.Command{
+// dbImportCmd represents the import command
+var dbImportCmd = &cobra.Command{
 	Use:   "import",
 	Aliases: []string{"restore"},
 	Short: "Import/Restore a database file",
@@ -18,7 +18,7 @@ var importCmd = &cobra.Command{
 }
 
 func init() {
-	databaseCmd.AddCommand(importCmd)
+	dbCmd.AddCommand(dbImportCmd)
 
 	// Here you will define your flags and configuration settings.
 

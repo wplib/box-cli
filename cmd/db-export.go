@@ -7,7 +7,7 @@ import (
 )
 
 // exportCmd represents the export command
-var exportCmd = &cobra.Command{
+var dbExportCmd = &cobra.Command{
 	Use:   "export",
 	Aliases: []string{"backup"},
 	Short: "Export/Backup a database file",
@@ -19,7 +19,7 @@ If a backup.sql already exists it will increment by 1, e.g. backup1.sql, backup2
 }
 
 func init() {
-	databaseCmd.AddCommand(exportCmd)
+	dbCmd.AddCommand(dbExportCmd)
 
 	// Here you will define your flags and configuration settings.
 
