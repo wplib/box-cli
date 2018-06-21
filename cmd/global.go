@@ -30,7 +30,7 @@ var globalCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(globalCmd)
+	RootCmd.AddCommand(globalCmd)
 
 	// Here you will define your flags and configuration settings.
 

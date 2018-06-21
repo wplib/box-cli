@@ -1,23 +1,28 @@
-package cmd
+
+package passthru
 
 import (
 	"fmt"
-
 	"github.com/spf13/cobra"
+	"github.com/wplib/box-cli/cmd"
+
 )
 
-// DbCmd represents the database command
-var DbCmd = &cobra.Command{
-	Use:   "db",
-	Aliases: []string{"databases"},
-	Short: "Manage MySQL-type databases that WPLib Box provides for you",
+// wpCmd represents the database command
+var dockerCmd = &cobra.Command{
+	Use:   "docker",
+	Short: "[Experimental] Directly run DOCKER commands",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("database called")
+		fmt.Println("docker called")
 	},
+	Hidden: true,
 }
 
 func init() {
-	RootCmd.AddCommand(DbCmd)
+	cmd.RootCmd.AddCommand(dockerCmd)
+	annotations := make(map[string]string)
+	annotations["passthru"] = "passthru"
+	dockerCmd.Annotations = annotations
 
 	// Here you will define your flags and configuration settings.
 

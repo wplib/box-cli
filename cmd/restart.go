@@ -16,7 +16,7 @@ var restartCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(restartCmd)
+	RootCmd.AddCommand(restartCmd)
 
 	// Here you will define your flags and configuration settings.
 

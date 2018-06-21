@@ -1,9 +1,10 @@
-package cmd
+package db
 
 import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/wplib/box-cli/cmd"
 )
 
 // dbImportCmd represents the import command
@@ -18,7 +19,7 @@ var dbImportCmd = &cobra.Command{
 }
 
 func init() {
-	dbCmd.AddCommand(dbImportCmd)
+	cmd.DbCmd.AddCommand(dbImportCmd)
 
 	// Here you will define your flags and configuration settings.
 

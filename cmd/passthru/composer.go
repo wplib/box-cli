@@ -1,23 +1,28 @@
-package cmd
+
+package passthru
 
 import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/wplib/box-cli/cmd"
 )
 
-// DbCmd represents the database command
-var DbCmd = &cobra.Command{
-	Use:   "db",
-	Aliases: []string{"databases"},
-	Short: "Manage MySQL-type databases that WPLib Box provides for you",
+// composerCmd represents the database command
+var composerCmd = &cobra.Command{
+	Use:   "composer",
+	Short: "Directly run Composer for PHP commands",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("database called")
+		fmt.Println("composer called")
 	},
+	Hidden: true,
 }
 
 func init() {
-	RootCmd.AddCommand(DbCmd)
+	cmd.RootCmd.AddCommand(composerCmd)
+	annotations := make(map[string]string)
+	annotations["passthru"] = "passthru"
+	composerCmd.Annotations = annotations
 
 	// Here you will define your flags and configuration settings.
 

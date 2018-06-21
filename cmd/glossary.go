@@ -18,7 +18,7 @@ var glossaryCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(glossaryCmd)
+	RootCmd.AddCommand(glossaryCmd)
 
 	// Here you will define your flags and configuration settings.
 

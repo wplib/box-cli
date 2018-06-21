@@ -1,9 +1,10 @@
-package cmd
+package cargo
 
 import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/wplib/box-cli/cmd"
 )
 
 // serviceCmd represents the service command
@@ -14,10 +15,14 @@ var serviceCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("service called")
 	},
+	Hidden:true,
 }
 
 func init() {
-	rootCmd.AddCommand(serviceCmd)
+	cmd.RootCmd.AddCommand(serviceCmd)
+	annotations := make(map[string]string)
+	annotations["cargo"] = "yes"
+	serviceCmd.Annotations = annotations
 
 	// Here you will define your flags and configuration settings.
 

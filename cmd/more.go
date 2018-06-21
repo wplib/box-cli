@@ -1,4 +1,3 @@
-
 package cmd
 
 import (
@@ -7,25 +6,25 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// stackCmd represents the stack command
-var stackCmd = &cobra.Command{
-	Use:   "stack",
-	Short: "Manage 'Stacks' in WPLib Box",
+// moreCmd represents the database command
+var moreCmd = &cobra.Command{
+	Use:   "more",
+	Short: "List more Box commands",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("stack called")
+		fmt.Println("more called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(stackCmd)
+	RootCmd.AddCommand(moreCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// stackCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// databaseCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// stackCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// databaseCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

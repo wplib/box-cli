@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-var rootCmd = &cobra.Command{
+var RootCmd = &cobra.Command{
 	Use:   "box",
 	Short: "Box is the command-line tool for WPLib Box that you run in your terminal.",
 	Long: `Box is the command-line tool for WPLib Box. 
@@ -18,7 +18,7 @@ To run "box" inside the VM, first type "vagrant ssh" on your command line.`,
 }
 
 func Execute() {
-	if err := rootCmd.Execute(); err != nil {
+	if err := RootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}

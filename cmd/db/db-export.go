@@ -1,9 +1,10 @@
-package cmd
+package db
 
 import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/wplib/box-cli/cmd"
 )
 
 // exportCmd represents the export command
@@ -19,7 +20,7 @@ If a backup.sql already exists it will increment by 1, e.g. backup1.sql, backup2
 }
 
 func init() {
-	dbCmd.AddCommand(dbExportCmd)
+	cmd.DbCmd.AddCommand(dbExportCmd)
 
 	// Here you will define your flags and configuration settings.
 

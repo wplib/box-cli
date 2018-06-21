@@ -1,23 +1,27 @@
-package cmd
+package shorthand
 
 import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/wplib/box-cli/cmd"
 )
 
-// DbCmd represents the database command
-var DbCmd = &cobra.Command{
-	Use:   "db",
-	Aliases: []string{"databases"},
-	Short: "Manage MySQL-type databases that WPLib Box provides for you",
+// webCmd represents the database command
+var webCmd = &cobra.Command{
+	Use:   "web",
+	Short: "[Experimental] Manage websites that WPLib Box serves for you",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("database called")
+		fmt.Println("web called")
 	},
+	Hidden: true,
 }
 
 func init() {
-	RootCmd.AddCommand(DbCmd)
+	cmd.RootCmd.AddCommand(webCmd)
+	annotations := make(map[string]string)
+	annotations["shorthand"] = "yes"
+	webCmd.Annotations = annotations
 
 	// Here you will define your flags and configuration settings.
 
