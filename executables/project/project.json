@@ -1,0 +1,46 @@
+{
+  "stack": {
+    "wordpress/webserver": "wplib/nginx:1.14.0",
+    "box/sqladmin": "wplib/adminer:4.6.2",
+    "box/mailsender": "wplib/mailhog:1.0.0",
+    "wordpress/cliapp": "wplib/wp-cli:1.5.1",
+    "wordpress/cacheserver": "wplib/redis:4.0.9",
+    "wordpress/processvm": "wplib/php:7.1.18",
+    "wordpress/dbserver": "wplib/mysql:5.5.60",
+    "box/webproxy": "wplib/proxy:1.14.0",
+    "mkdocs/webserver": "wplib/mkdocs:0.15.3"
+  },
+  "alt.project.json": {
+    "stack": {
+      "webserver": "nginx:1.14.0",
+      "cliapp": "wp-cli:1.5.1",
+      "cacheserver": "redis:4.0.9",
+      "processvm": "php:7.1.18",
+      "dbserver": "mysql:5.5.60",
+      "box/sqladmin": "adminer:4.6.2",
+      "box/mailsender": "mailhog:1.0.0",
+      "box/webproxy": "proxy:1.14.0",
+      "mkdocs/webserver": "mkdocs:0.15.3"
+    },
+    "defaults": {
+      "stack": {
+        "componentType": {
+          "host": "wplib.org",
+          "stack": "wordpress"
+        },
+        "component": {
+          "host": "github.com",
+          "group": "wplib"
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
